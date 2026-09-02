@@ -1,0 +1,48 @@
+site_name: configuration-management-tool docs
+site_description: "cmt: a super-simple deployment tool. Named shell commands, defined in an HCL2 manifest, run against named groups of hosts in parallel."
+site_url: https://configuration-management-tool.github.io/docs/
+repo_url: https://github.com/configuration-management-tool
+repo_name: configuration-management-tool
+edit_uri: ""
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+  palette:
+    # First entry has no explicit light/dark, so it is the default: follow the system.
+    - media: "(prefers-color-scheme)"
+      toggle: { icon: material/brightness-auto, name: Switch to light mode }
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle: { icon: material/weather-night, name: Switch to dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle: { icon: material/brightness-auto, name: Follow the system }
+
+extra:
+  version:
+    provider: mike
+    default: latest
+
+nav:
+  - Overview: index.md
+  - Modules: modules.md
+  - Manifest reference: manifest.md
+  - CLI usage: cli.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
